@@ -1,9 +1,9 @@
-## RI-part2
+# RI-part2
 
 
 
 
-# Atributos:
+## Atributos:
   Marca
 
   Cordas (aço/nylon)
@@ -30,7 +30,7 @@
   -Casas Bahia(71-80)
 
 
-Sites com páginas não estruturadas:
+# Sites com páginas não estruturadas:
 
   -MilSons(1-10)
 
