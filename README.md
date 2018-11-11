@@ -15,7 +15,7 @@
   Tampo
 
 
-# Sites com páginas estruturadas:
+## Sites com páginas estruturadas:
 
   -MundoMax(21-30)
 
@@ -30,7 +30,7 @@
   -Casas Bahia(71-80)
 
 
-# Sites com páginas não estruturadas:
+## Sites com páginas não estruturadas:
 
   -MilSons(1-10)
 
