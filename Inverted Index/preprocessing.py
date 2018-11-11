@@ -38,6 +38,8 @@ def extractMundoMax():
                         append = 0
                     if("Descrição\n" in line):
                         append = 1
+                    if("Características\n" in line):
+                        append = 1
                     if("AVALIAR\n" in line):
                         append = 0
 
@@ -68,33 +70,33 @@ def extractMadeInBrazil():
                 for i in lst:
                     fout.write(i)
 
-def extractPlaytech():
-    for file in os.listdir(texto_path):
-        if(int(file[:-4]) > 30 and int(file[:-4]) < 41):
-            print(int(file[:-4]))
-            file_path = os.path.join(texto_path, file)
-            lst = []
-            append = 0
-            with open(file_path, "r", encoding="utf8") as fin:
-                for line in fin:
-                    if(append == 1):
-                        lst.append(line)
-                    if("//------------------------- Tratamento do player de video/iframe -----------------------------------//\n" in line):
-                        append = 1
-                    if("Quantidade\n" in line):
-                        append = 0
-                    if("informações\n" in line):
-                        append = 1
-                    if("sobre a marca\n" in line):
-                        append = 0
-            file_path = r"C:\Users\Lucas\Desktop\teste.txt"
-            with open(file_path, "w", encoding="utf8") as fout:
-                for i in lst:
-                    fout.write(i)
-            input("wait")
+# def extractPlaytech():
+#     for file in os.listdir(texto_path):
+#         if(int(file[:-4]) > 30 and int(file[:-4]) < 41):
+#             print(int(file[:-4]))
+#             file_path = os.path.join(texto_path, file)
+#             lst = []
+#             append = 0
+#             with open(file_path, "r", encoding="utf8") as fin:
+#                 for line in fin:
+#                     if(append == 1):
+#                         lst.append(line)
+#                     if("//------------------------- Tratamento do player de video/iframe -----------------------------------//\n" in line):
+#                         append = 1
+#                     if("Quantidade\n" in line):
+#                         append = 0
+#                     if("informações\n" in line):
+#                         append = 1
+#                     if("sobre a marca\n" in line):
+#                         append = 0
+#             file_path = r"C:\Users\Lucas\Desktop\teste.txt"
+#             with open(file_path, "w", encoding="utf8") as fout:
+#                 for i in lst:
+#                     fout.write(i)
+#             input("wait")
 
 
-def preprocessing():
+def tokenize():
     stopWords_p = stopwords.words('portuguese')
     stopWords_e = stopwords.words('english')
     stopWords = stopWords_p + stopWords_e
@@ -117,4 +119,7 @@ def preprocessing():
             arquivo.write(str(pag))
             arquivo.close()
 
+htmlTotxt()
+input("wait")
 extractMadeInBrazil()
+extractMundoMax()
