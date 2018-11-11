@@ -8,7 +8,7 @@
 
   Cordas (aço/nylon)
 
-  Categoria(acústico/elétrico/eletroacustico)
+  Categoria(acústico/elétrico) eletroacustico = eletrico
 
   Escala
 
