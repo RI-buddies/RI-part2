@@ -20,7 +20,14 @@ def soups_of_interest(html):
     return text
 
 def clean_text(text):
-    x = ['/', ',', '"', "'", '?', '!', ':', ';', '(', ')', '[', ']', '{', '}', '|', '=', ':', '\\', '*', '>', '<']
+    x = ['/', ',', '"', "'", '?', '!', ':', ';', '(', ')', '[', ']', '{', '}', '|', '=', ':', '\\', '*', '>', '<', '@',
+    '&', '-']
     for a in x:
         text = text.replace(a, " ")
     return text
+
+def readList(file_path):
+    with open(file_path, "r") as file:
+        data = eval(file.readline())
+        print(data)
+    return data
