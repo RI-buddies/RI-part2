@@ -1,10 +1,10 @@
 ## RI-part2
 
-Tratamento de consultas
 
 
 
-Marca
+# Atributos:
+  Marca
 
   Cordas (aço/nylon)
 
@@ -15,7 +15,7 @@ Marca
   Tampo
 
 
-Sites com páginas estruturadas:
+# Sites com páginas estruturadas:
 
   -MundoMax(21-30)
 
