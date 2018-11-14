@@ -36,11 +36,9 @@ def extractMundoMax():
                         append = 1
                     if("COMPRAR JUNTO\n" in line):
                         append = 0
-                    if("Descrição\n" in line):
+                    if("Descrição\n" in line) or ("Características\n" in line):
                         append = 1
-                    if("Características\n" in line):
-                        append = 1
-                    if("AVALIAR\n" in line):
+                    if("AVALIAR\n" in line) or ("Quantidade no kit: 1 UNIDADE\n" in line):
                         append = 0
 
             with open(file_path, "w", encoding="utf8") as fout:
@@ -119,7 +117,8 @@ def tokenize():
             arquivo.write(str(pag))
             arquivo.close()
 
-htmlTotxt()
-input("wait")
-extractMadeInBrazil()
-extractMundoMax()
+# htmlTotxt()
+# input("wait")
+# extractMadeInBrazil()
+# extractMundoMax()
+# tokenize()

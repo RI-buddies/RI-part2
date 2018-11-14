@@ -27,7 +27,7 @@ def clean_text(text):
     return text
 
 def readList(file_path):
-    with open(file_path, "r") as file:
+    with open(file_path, "r", encoding="utf8") as file:
         data = eval(file.readline())
-        print(data)
+        # print(data)
     return data
