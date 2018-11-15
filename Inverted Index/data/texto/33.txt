@@ -1,3 +1,7 @@
+Cordas & Acessórios
+Violão Eletroacústico
+Aço
+// Insere função no array "loadEvents" que é chamado na layout executando todas as funções contidas nele.
 var autoplay = 'manual';
 /** Adiciona os eventos das imagens do produto. **/
 $('#thumbVideo').click(function () {

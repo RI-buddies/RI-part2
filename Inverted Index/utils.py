@@ -1,8 +1,21 @@
 import os
 import re
+import csv
 import urllib.request
 
 from bs4 import BeautifulSoup
+
+marcas = ["giannini", "andaluz", "takamine", "crafter", "dean", 
+           "epiphone", "fender", "ibanez", "eagle", "phx", "tagima", 
+           "sigma", "martin", "madrid", "strinberg", "di", "di giorgio",
+           "yamaha", "michael", "vogga", "auburn", "harmonics"]
+cordas = ["nylon", "aço", "aco"]
+categorias = ["acústico", "acustico", "elétrico", "eletrico"
+             ,"eletroacústico", "eletroacustico", "eletroácustico"]
+escalas = ["rosewood", "jacarandá", "pau", "pau ferro", 
+           "richlite", "hardwood"]
+tampos =["basswood", "spruce", "linden", "liden", "pinho", 
+         "pine", "birch", "cedar"]
 
 def soups_of_interest(html):
     soup = BeautifulSoup(html, features='lxml')
@@ -26,8 +39,24 @@ def clean_text(text):
         text = text.replace(a, " ")
     return text
 
-def readList(file_path):
+def readListFromFile(file_path):
     with open(file_path, "r", encoding="utf8") as file:
         data = eval(file.readline())
         # print(data)
     return data
+
+def writeIndexToCsv(index, index_path): 
+    print("Escrevendo index em arquivo .csv...")
+    file_path = os.path.join(index_path, "index.csv")
+    with open(file_path, "w", encoding = "utf8", newline='') as csv_file:
+        writer = csv.writer(csv_file)
+        for key, value in index.items():
+            writer.writerow([key, value])
+
+def readIndexFromCsv(index_path):
+    print("Lendo index do arquivo .csv...")
+    file_path = os.path.join(index_path, "index.csv")
+    with open(file_path, 'r', encoding="utf8") as csv_file:
+        reader = csv.reader(csv_file)
+        index = dict(reader)
+    return index

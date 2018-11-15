@@ -1,33 +1,19 @@
 import os
-from utils import readList
+from utils import readListFromFile
 
-def dictionary():
-    dicionario = {"rosewood.escala": [[1,2]]}
+texto_path = r"C:\Users\Lucas\Documents\EC\10º Período\RI\Projeto2\RI-part2\Inverted Index\data\texto"
 
-    print(dicionario["rosewood.escala"])
-    dicionario["rosewood.escala"].append([3,9])
-    dicionario["rosewood.escala"].append([5,10])
-    print(dicionario["rosewood.escala"])
-    dicionario["linden.tampo"] = [[2,5]]
-    print(dicionario)
-
-# file_path = r"C:\Users\Lucas\Desktop\teste.txt"
-# file = open(file_path, "w", encoding="utf8")
-# for i in range(1, 10):
-#     file.write(str(i))
-#     input("wait")
-# file.close()
-
-# palavra = "lucas"
-# dic = {"lucas.melo": [[1, "nome"]]}
-# dic[palavra+".melo"].append([2, "nome2"])
-# print(dic)
-
-from collections import defaultdict
-
-marca = "giannini"
-countMarca = 5
-index = defaultdict(list)
-index[marca+".marca"].append([marca, countMarca])
-print(index[marca+".marca"])
+for file in os.listdir(texto_path):
+        if(int(file[:-4]) > 50 and int(file[:-4]) < 61):
+            print(int(file[:-4]))
+            file_path = os.path.join(texto_path, file)
+            lst = []
+            append = 0
+            with open(file_path, "r", encoding="utf8") as fin:
+                a = enumerate(fin)
+                print(a)
+                # for idx, line in enumerate(fin):
+                #     print("IDX ->", idx, "\nLine ->S", line)
+                #     print("IDX + 1 ->", idx+1, "\nLINE + 1 ->", fin[idx+1])
+                #     input("wait")            
 
