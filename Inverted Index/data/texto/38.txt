@@ -1,7 +1,9 @@
+Home
 Cordas & Acessórios
 Violão Eletroacústico
 Aço
 // Insere função no array "loadEvents" que é chamado na layout executando todas as funções contidas nele.
+//------------------------- Tratamento do player de video/iframe -----------------------------------//
 var autoplay = 'manual';
 /** Adiciona os eventos das imagens do produto. **/
 $('#thumbVideo').click(function () {
@@ -26,6 +28,7 @@ var html = '<iframe width="' + widthImagemPrincipal + '" height="' + heightImage
 $("#videoPrincipal").html(html);
 }
 });
+//------------------------- Tratamento do player de video/iframe -----------------------------------//
 //------------------------- Tratamento do player de video/iframe -----------------------------------//
 });
 Violão Aço Dallas Elétrico com Afinador Série América Tagima - Natural (NA)
@@ -97,6 +100,7 @@ R$ 683,10
 à vista
 (com 10,00% de desconto no Boleto Bancário / Transferência Itaú)
 Quantidade
+informações
 Violão Dallas da Tagima, uma das marcas mais importantes e reconhecidas no Brasil pela fabricação de instrumentos musicais. Cada vez mais músicos e artistas da musica utilizam e apoiam os instrumentos da marca que são fabricados e desenvolvidos nos mais altos padrões de qualidade, para entregar ao consumidor final um produto impecável não só em sonoridade, mas em acabamento. Tudo isso a um custo acessível.
 Além da qualidade do instrumento, ele oferece excelente acabamento, sonoridade encorpada e ótima captação com equalização de 5 bandas e afinador, o que possibilita a customização do som e timbre da maneira como você imagina com a vantagem de se poder afinar com praticidade aonde estiver.
 Um Violão Aço incrível que serve tanto profissionais como iniciantes na arte!

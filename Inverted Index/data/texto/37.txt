@@ -1,7 +1,9 @@
+Home
 Cordas & Acessórios
 Violão Eletroacústico
 Aço
 // Insere função no array "loadEvents" que é chamado na layout executando todas as funções contidas nele.
+//------------------------- Tratamento do player de video/iframe -----------------------------------//
 var autoplay = 'manual';
 /** Adiciona os eventos das imagens do produto. **/
 $('#thumbVideo').click(function () {
@@ -27,6 +29,7 @@ $("#videoPrincipal").html(html);
 }
 });
 //------------------------- Tratamento do player de video/iframe -----------------------------------//
+//------------------------- Tratamento do player de video/iframe -----------------------------------//
 });
 Violão LX Ed Sheeran ÷ 3 com Capa Eletroacústico Martin
 SKU 42487
@@ -43,6 +46,7 @@ R$ 7.109,10
 à vista
 (com 10,00% de desconto no Boleto Bancário / Transferência Itaú)
 Quantidade
+informações
 O Divide (÷), o mais recente da trilogia dos violões Martin signature de Ed Sheeran, está repleto das nuances de timbre e visual estilizado por Ed Sheeran.
 O tampo em pinho sólido, familiar do LX1E Little Martin, produz muita sonoridade. Mas a novidade do violão Ed Sheeran Divide é o seu HPL laminado em mogno, resistente à água, e com sonoridadeexcelente, ornamentos descolados nas cores preto e azul que combinam com o mosaico e o ardono "÷" , faz parte do pacote de novidades a captação Fishman Sonitone para uma execução ainda mais realista do instrumento quando plugado em um PA. O Martin's X bracing dá ao violão Ed Sheeran Divide mais amplitude sonora, timbremais grave, o que faz deste um ótimo violão para trabalhar em sua idéias em casa e um complemento perfeito para a produção de uma banda pop.
 detalhes do produto

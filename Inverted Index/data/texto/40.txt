@@ -1,7 +1,9 @@
+Home
 Cordas & Acessórios
 Violão Eletroacústico
 Nylon
 // Insere função no array "loadEvents" que é chamado na layout executando todas as funções contidas nele.
+//------------------------- Tratamento do player de video/iframe -----------------------------------//
 var autoplay = 'manual';
 /** Adiciona os eventos das imagens do produto. **/
 $('#thumbVideo').click(function () {
@@ -26,6 +28,7 @@ var html = '<iframe width="' + widthImagemPrincipal + '" height="' + heightImage
 $("#videoPrincipal").html(html);
 }
 });
+//------------------------- Tratamento do player de video/iframe -----------------------------------//
 //------------------------- Tratamento do player de video/iframe -----------------------------------//
 });
 Violão Nylon Vegas Elétrico com Afinador Série América Tagima - Preto (BK)
@@ -97,6 +100,7 @@ R$ 683,10
 à vista
 (com 10,00% de desconto no Boleto Bancário / Transferência Itaú)
 Quantidade
+informações
 O violão Tagima Vegas possui design moderno com cutaway para alcance das casas mais agudas e com desenho do braço mais confortável do que violões de nylon tradicionais, contribuindo bastante na performance do músico.
 detalhes do produto
 * Braço: Okoume* Escala: Rosewood* Tampo: Spruce* Lateral e fundo: Agathis* Nut: 48 mm* Captação: Piezo* Pré: Tagima TEQ-8, ativo de 4 bandas e afinador* Controles: Tagima TEQ-8 com volume, médio, grave, agudo e presence.* Tarraxas: 3+3 Douradas* Cavalete: Rosewood* Fabricação: China

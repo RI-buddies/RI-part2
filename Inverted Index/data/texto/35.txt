@@ -1,7 +1,9 @@
+Home
 Cordas & Acessórios
 Violão Eletroacústico
 Aço
 // Insere função no array "loadEvents" que é chamado na layout executando todas as funções contidas nele.
+//------------------------- Tratamento do player de video/iframe -----------------------------------//
 var autoplay = 'manual';
 /** Adiciona os eventos das imagens do produto. **/
 $('#thumbVideo').click(function () {
@@ -27,6 +29,7 @@ $("#videoPrincipal").html(html);
 }
 });
 //------------------------- Tratamento do player de video/iframe -----------------------------------//
+//------------------------- Tratamento do player de video/iframe -----------------------------------//
 });
 Violão Aço Grand Orchestra GMC STE Sigma
 SKU 42645
@@ -43,6 +46,7 @@ R$ 3.041,10
 à vista
 (com 10,00% de desconto no Boleto Bancário / Transferência Itaú)
 Quantidade
+informações
 A Marca Sigma surgiu em 1970, oferecendo violões de excelente qualidade e criando sua reputação no decorrer dos anos sequentes.Os violões Sigma foram desenvolvidos por uma equipe altamente qualificada e treinada no Japão, e posteriormente enviados aos Estados Unidos para inspeção antes de serem distribuídos nas principais lojas de instrumentos musicais. Esse violão modelo Grand OM-14 Fret, possui acabamento de primeira como tampo em Sitka Spruce sólido, laterais, fundo e braço em Mogno, e captação Fishman Isys + com afinador.
 detalhes do produto
 Modelo: Grand OM-14 Fret;Tampo em Spruce Sitka Sólido; Lateral e traseira em Mogno;Braço em Mogno;Escala em Pau Ferro; Comprimento da escala: 645 mm;Largura do Nut: 44,5 mm;Nut: Bone; Tarraxas: Cromadas Die Cast;Captador Fishman Isys +, com afinador.Fotos meramente ilustrativas.

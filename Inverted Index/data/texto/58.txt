@@ -1,5 +1,7 @@
+}(document, 'script', 'facebook-jssdk'));
 Violão Clássico Yamaha C80II Natural, Acústico com Cordas Nylon
 CÓD.: 36477
+Garantia
 Descrição do produto
 Estes instrumentos de preços competitivos dispõem das qualidades que somente a Yamaha pode oferecer: mão de obra especializada, qualidade, performance, timbre e facilidade ao tocar são alguns dos diferenciais. Ótimos instrumentos para iniciantes e estudantes.
 Os violões Yamaha são reconhecidos pelo sua qualidade tonal e o preço acessível, com muitas opções para estudantes ou músicos experientes.
@@ -18,6 +20,7 @@ Informações técnicas
 Yamaha
 Atualmente, a Yamaha Musical se firmou como a maior fabricante de instrumentos musicais do mundo, somando 26 mil funcionários no total, 89 subsidiárias. Desde o ano de 1900 a empresa já vendeu 6,15 milhões de pianos. Além da liderança no mercado de instrumentos musicais, a empresa está no topo dos mercados de áudio e vídeo, equipamentos de tecnologia da informação, entre outros.
 Você pode gostar também
+Garantia
 Garantia do fabricante: 12 meses
 Avaliação do produto
 linha ao lado do título

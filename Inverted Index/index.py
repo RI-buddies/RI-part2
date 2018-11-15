@@ -2,6 +2,8 @@
 #MadeInBrazil - OK
 #Playtech - OK
 #MultiSom - OK
+#Americanas - OK
+#Casas Bahia - OK
 
 import os 
 import csv
@@ -23,7 +25,7 @@ def createIndex():
     print("Criando índice invertido...")
     for file in os.listdir(tokens_path):
         countMarca = countCorda = countCategoria = countEscala = countTampo = 0
-        if(int(file[:-4]) > 20 and int(file[:-4]) < 61):
+        if(int(file[:-4]) > 20 and int(file[:-4]) < 81):
             file_path = os.path.join(tokens_path, file)
             tokens = readListFromFile(file_path)
             for idx, token in enumerate(tokens):
@@ -62,9 +64,9 @@ def createIndex():
 
                 elif token in tampos:
                     countTampo += 1
-                    if token == "liden":
+                    if (token == "liden") or (token == "lindan"):
                         tampo = "linden"
-                    elif (token == "pinho") or (token == "pine"):
+                    elif (token == "pinho") or (token == "pine") or (file == "80.txt"):
                         tampo = "spruce"
                     else:
                         tampo = token
@@ -105,7 +107,7 @@ def showIndexAtts(atributo, atributo_array): #função que imprime os pares atri
                 input("wait")
     elif atributo == "Tampo":
         for att in atributo_array:
-            if (att != "pinho") and (att != "pine") and (att != "liden"):
+            if (att != "pinho") and (att != "pine") and (att != "liden") and (att != "lindan"):
                 print("Tampo.%s -> " % att, index["Tampo."+att])
                 input("wait")       
 

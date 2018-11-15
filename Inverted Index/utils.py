@@ -10,12 +10,12 @@ marcas = ["giannini", "andaluz", "takamine", "crafter", "dean",
            "sigma", "martin", "madrid", "strinberg", "di", "di giorgio",
            "yamaha", "michael", "vogga", "auburn", "harmonics"]
 cordas = ["nylon", "aço", "aco"]
-categorias = ["acústico", "acustico", "elétrico", "eletrico"
-             ,"eletroacústico", "eletroacustico", "eletroácustico"]
+categorias = ["acústico", "acustico", "elétrico", "eletrico",
+              "eletroacústico", "eletroacustico", "eletroácustico"]
 escalas = ["rosewood", "jacarandá", "pau", "pau ferro", 
-           "richlite", "hardwood"]
-tampos =["basswood", "spruce", "linden", "liden", "pinho", 
-         "pine", "birch", "cedar"]
+           "richlite", "hardwood", "maple"]
+tampos =["basswood", "spruce", "linden", "liden", "lindan", "pinho", 
+         "pine", "birch", "cedar", "plywood"]
 
 def soups_of_interest(html):
     soup = BeautifulSoup(html, features='lxml')

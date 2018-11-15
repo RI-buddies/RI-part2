@@ -3,17 +3,17 @@ from utils import readListFromFile
 
 texto_path = r"C:\Users\Lucas\Documents\EC\10º Período\RI\Projeto2\RI-part2\Inverted Index\data\texto"
 
-for file in os.listdir(texto_path):
-        if(int(file[:-4]) > 50 and int(file[:-4]) < 61):
-            print(int(file[:-4]))
-            file_path = os.path.join(texto_path, file)
-            lst = []
-            append = 0
-            with open(file_path, "r", encoding="utf8") as fin:
-                a = enumerate(fin)
-                print(a)
-                # for idx, line in enumerate(fin):
-                #     print("IDX ->", idx, "\nLine ->S", line)
-                #     print("IDX + 1 ->", idx+1, "\nLINE + 1 ->", fin[idx+1])
-                #     input("wait")            
+import re
+text = "PythonTutorialAndExercises"
+lst = []
+file_path = os.path.join(texto_path, "69.txt")
+with open(file_path, "r", encoding="utf8") as fin:
+    for line in fin:
+        lista = re.findall('[A-Z][^A-Z]*', line)
+        lst.extend(lista)
 
+file_path = r"C:\Users\Lucas\Desktop\teste.txt"
+with open(file_path, "w", encoding="utf8") as fout:
+    for i in lst:
+        fout.write(i)
+        fout.write(" ")

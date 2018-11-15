@@ -1,7 +1,9 @@
+Home
 Cordas & Acessórios
 Violão Eletroacústico
 12 Cordas
 // Insere função no array "loadEvents" que é chamado na layout executando todas as funções contidas nele.
+//------------------------- Tratamento do player de video/iframe -----------------------------------//
 var autoplay = 'manual';
 /** Adiciona os eventos das imagens do produto. **/
 $('#thumbVideo').click(function () {
@@ -27,6 +29,7 @@ $("#videoPrincipal").html(html);
 }
 });
 //------------------------- Tratamento do player de video/iframe -----------------------------------//
+//------------------------- Tratamento do player de video/iframe -----------------------------------//
 });
 Violão Aço 12 Cordas Folk Dreadnought DM 12E Sigma
 SKU 42651
@@ -43,6 +46,7 @@ R$ 2.681,10
 à vista
 (com 10,00% de desconto no Boleto Bancário / Transferência Itaú)
 Quantidade
+informações
 O Sigma DM-12E é um excelente custo benefício para quem está em busca de um 12 cordas acessível e de qualidade!Possui tampo maciço em pinho sitka, o que dá ao DM-12E brilho e capacidade sonora, com suas laterias e fundo em mogno, permitem um timbre rico e consistente.
 detalhes do produto
 Design: D-14 Fret Tampo: Pinho Sitka Maciço Laterais & Fundo: Mogno Braço: Mogno Nut: Osso Rastilho: Osso Escala: Pau Ferro Espessura da Escala: 25.4" (645 mm) Largura do braço na altura do Nut: 1-7/8" (47.6mm) Tarraxas: Diecast cromadasCaptação: Sigma CE 304Fotos meramente ilustrativas.

@@ -1,7 +1,9 @@
+Home
 Cordas & Acessórios
 Violão Eletroacústico
 Aço
 // Insere função no array "loadEvents" que é chamado na layout executando todas as funções contidas nele.
+//------------------------- Tratamento do player de video/iframe -----------------------------------//
 var autoplay = 'manual';
 /** Adiciona os eventos das imagens do produto. **/
 $('#thumbVideo').click(function () {
@@ -27,6 +29,7 @@ $("#videoPrincipal").html(html);
 }
 });
 //------------------------- Tratamento do player de video/iframe -----------------------------------//
+//------------------------- Tratamento do player de video/iframe -----------------------------------//
 });
 Violão
 Aço Auditorium 000ME Sigma
@@ -44,6 +47,7 @@ R$ 2.447,10
 à vista
 (com 10,00% de desconto no Boleto Bancário / Transferência Itaú)
 Quantidade
+informações
 O violão Sigma 000ME possui tampo maciço, produz um grave definido com médios equilibrados e agudos brilhantes. Suas tarraxas garantem estabilidade de afinação e ação de corda plana;
 Tocabilidade excelente, com os captadores internos da Sigma e afinador integrado, este violão está pronto para o palco.
 detalhes do produto
