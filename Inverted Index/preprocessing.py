@@ -295,7 +295,6 @@ def tokenize():
 
 def preProcessing():
     htmlTotxt()
-    input("wait")
     extractMilSons()
     extractNovaMusic()
     extractMundoMax()
