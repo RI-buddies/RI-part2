@@ -24,34 +24,55 @@ def htmlTotxt():
             arquivo.write(soups_of_interest(pag))
             arquivo.close()
 
-# def extractMilSons():
-#     print("Extraindo texto de 'MilSons'...")
-#     for file in os.listdir(texto_path):
-#         if(int(file[:-4]) > 0 and int(file[:-4]) < 11):
-#             print(int(file[:-4]))
-#             file_path = os.path.join(texto_path, file)
-#             lst = []
-#             append = 0
-#             with open(file_path, "r", encoding="utf8") as fin:
-#                 for line in fin:
-#                     if(append == 1):
-#                         lst.append(line)
-#                     if("Home\n" in line):
-#                         lst.append(line)
-#                         append = 1
-#                     if("Clique aqui para imagem ampliada\n" in line):
-#                         append = 0
-#                     if("Descrição\n" in line):
-#                         lst.append(line)
-#                         append = 1
-#                     if("Pergunte e veja as opiniões de quem já comprou\n" in line):
-#                         append = 0
+def extractMilSons():
+    print("Extraindo texto de 'MilSons'...")
+    for file in os.listdir(texto_path):
+        if(int(file[:-4]) > 0 and int(file[:-4]) < 11):
+            print(int(file[:-4]))
+            file_path = os.path.join(texto_path, file)
+            lst = []
+            append = 0
+            with open(file_path, "r", encoding="utf8") as fin:
+                for line in fin:
+                    if "Home" in line:
+                        append = 1
+                    if "Saiba mais sobre este produto\n" in line:
+                        append = 0
+                    if "Descrição\n" in line:
+                        append = 1
+                    if ("Quem viu, também viu" in line) or ("Cadastre-se" in line):
+                        append = 0
+                    if(append == 1):
+                        lst.append(line)
+            
+            with open(file_path, "w", encoding="utf8") as fout:
+                for i in lst:
+                    fout.write(i)
 
-#             file_path = r"C:\Users\Lucas\Desktop\teste.txt"
-#             with open(file_path, "w", encoding="utf8") as fout:
-#                 for i in lst:
-#                     fout.write(i)
-#             input("wait")
+def extractNovaMusic():
+    print("Extraindo texto de 'MilSons'...")
+    for file in os.listdir(texto_path):
+        if(int(file[:-4]) > 10 and int(file[:-4]) < 21):
+            print(int(file[:-4]))
+            file_path = os.path.join(texto_path, file)
+            lst = []
+            append = 0
+            with open(file_path, "r", encoding="utf8") as fin:
+                for line in fin:
+                    if ("Início" in line) or ("Etiquetas" in line):
+                        append = 1
+                    if ("à vista" in line) or ("Esgotado" in line) or ("Compartilhe isso:" in line):
+                        append = 0
+                    if "Descrição do" in line:
+                        append = 1
+                    if ("Produtos relacionados" in line) or ("Cadastre-se" in line):
+                        append = 0
+                    if(append == 1):
+                        lst.append(line)
+           
+            with open(file_path, "w", encoding="utf8") as fout:
+                for i in lst:
+                    fout.write(i)
 
 def extractMundoMax():
     print("Extraindo texto de 'MundoMax'...")
@@ -275,12 +296,15 @@ def tokenize():
 def preProcessing():
     htmlTotxt()
     input("wait")
+    extractMilSons()
+    extractNovaMusic()
     extractMundoMax()
     extractMadeInBrazil()
     extractPlaytech()
     extractMultiSom()
     extractAmericanas()
-    extractCasasBahia()
-    #extractMilSons()
-    #extractNovaMusic()
+    extractCasasBahia()        
     tokenize()
+
+if __name__ == "__main__":
+    preProcessing()
