@@ -1,4 +1,5 @@
 #MilSons - OK
+#NovaMusic - OK
 #MundoMax - OK
 #MadeInBrazil - OK
 #Playtech - OK
@@ -19,6 +20,7 @@ tokens_path = os.path.join(os.path.join(os.path.abspath('.'), 'data'), 'tokens')
 index_path = os.path.abspath('.')
 
 index = defaultdict(list)
+compressedIndex = defaultdict(list)
 
 def createIndex():
     print("Criando índice invertido...")
@@ -77,16 +79,42 @@ def createIndex():
 
         if countMarca != 0:
             index["Marca."+marca].append([int(file[:-4]), countMarca])
+            if compressedIndex["Marca."+marca] == []:
+                compressedIndex["Marca."+marca].append([int(file[:-4]), countMarca])
+            else:
+                aux = index["Marca."+marca][-2]
+                compressedIndex["Marca."+marca].append([int(file[:-4]) - aux[0], countMarca])
         if countCorda != 0:
             index["Corda."+corda].append([int(file[:-4]), countCorda])
+            if compressedIndex["Corda."+corda] == []:
+                compressedIndex["Corda."+corda].append([int(file[:-4]), countCorda])
+            else:
+                aux = index["Corda."+corda][-2]
+                compressedIndex["Corda."+corda].append([int(file[:-4]) - aux[0], countCorda])
         if countCategoria != 0:
             index["Categoria."+categoria].append([int(file[:-4]), countCategoria])
+            if compressedIndex["Categoria."+categoria] == []:
+                compressedIndex["Categoria."+categoria].append([int(file[:-4]), countCategoria])
+            else:
+                aux = index["Categoria."+categoria][-2]
+                compressedIndex["Categoria."+categoria].append([int(file[:-4]) - aux[0], countCategoria])            
         if countEscala != 0:  
             index["Escala."+escala].append([int(file[:-4]), countEscala])
+            if compressedIndex["Escala."+escala] == []:
+                compressedIndex["Escala."+escala].append([int(file[:-4]), countEscala])
+            else:
+                aux = index["Escala."+escala][-2]
+                compressedIndex["Escala."+escala].append([int(file[:-4]) - aux[0], countEscala])            
         if countTampo != 0:
-            index["Tampo."+tampo].append([int(file[:-4]), countTampo])   
+            index["Tampo."+tampo].append([int(file[:-4]), countTampo])
+            if compressedIndex["Tampo."+tampo] == []:
+                compressedIndex["Tampo."+tampo].append([int(file[:-4]), countTampo])
+            else:
+                aux = index["Tampo."+tampo][-2]
+                compressedIndex["Tampo."+tampo].append([int(file[:-4]) - aux[0], countTampo])  
 
-    writeIndexToCsv(index, index_path) #Escrevendo índice invertido em arquivo .csv
+    writeIndexToCsv(index, index_path, "index.csv") #Escrevendo índice invertido em arquivo .csv
+    writeIndexToCsv(compressedIndex, index_path, "compressedIndex.csv") #Escrevendo índice invertido comprimido em arquivo .csv
 
 def showIndexAtts(atributo, atributo_array): #função que imprime os pares atributo-valor do índice invertido de acordo com o atributo escolhido
     if atributo == "Marca":

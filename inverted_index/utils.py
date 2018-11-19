@@ -45,9 +45,9 @@ def readListFromFile(file_path):
         # print(data)
     return data
 
-def writeIndexToCsv(index, index_path): 
+def writeIndexToCsv(index, index_path, file_name): 
     print("Escrevendo index em arquivo .csv...")
-    file_path = os.path.join(index_path, "index.csv")
+    file_path = os.path.join(index_path, file_name)
     with open(file_path, "w", encoding = "utf8", newline='') as csv_file:
         writer = csv.writer(csv_file)
         for key, value in index.items():

@@ -7,9 +7,9 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk import PorterStemmer
 
-data_path = r"C:\Users\Lucas\Documents\EC\10º Período\RI\Projeto2\RI-part2\Inverted Index\data\html"
-texto_path = r"C:\Users\Lucas\Documents\EC\10º Período\RI\Projeto2\RI-part2\Inverted Index\data\texto"
-tokenized_path = r"C:\Users\Lucas\Documents\EC\10º Período\RI\Projeto2\RI-part2\Inverted Index\data\tokens"
+data_path = r"C:\Users\Lucas\Documents\EC\10º Período\RI\Projeto2\RI-part2\inverted_index\data\html"
+texto_path = r"C:\Users\Lucas\Documents\EC\10º Período\RI\Projeto2\RI-part2\inverted_index\data\texto"
+tokenized_path = r"C:\Users\Lucas\Documents\EC\10º Período\RI\Projeto2\RI-part2\inverted_index\data\tokens"
 
 def htmlTotxt():
     print("Convertendo páginas HTML em texto...")
@@ -50,7 +50,7 @@ def extractMilSons():
                     fout.write(i)
 
 def extractNovaMusic():
-    print("Extraindo texto de 'MilSons'...")
+    print("Extraindo texto de 'NovaMusic'...")
     for file in os.listdir(texto_path):
         if(int(file[:-4]) > 10 and int(file[:-4]) < 21):
             print(int(file[:-4]))
