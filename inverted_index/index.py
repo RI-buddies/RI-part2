@@ -15,8 +15,8 @@ from utils import readIndexFromCsv
 from utils import writeIndexToCsv
 from utils import marcas, cordas, categorias, escalas, tampos
 
-tokens_path = r"C:\Users\Lucas\Documents\EC\10º Período\RI\Projeto2\RI-part2\Inverted Index\data\tokens"
-index_path = r"C:\Users\Lucas\Documents\EC\10º Período\RI\Projeto2\RI-part2\Inverted Index"
+tokens_path = os.path.join(os.path.join(os.path.abspath('.'), 'data'), 'tokens')
+index_path = os.path.abspath('.')
 
 index = defaultdict(list)
 
