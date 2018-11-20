@@ -141,7 +141,10 @@ def spearman(normal, cosined):
         dim = i - cosined.index(val)
         sume += pow(dim, 2)
     divid = pow(len(normal), 3) - len(normal)
-    dim = 6*sume/divid
+    if divid != 0:
+        dim = 6*sume/divid
+    else:
+        dim = 0
     return 1 - dim
 
 
@@ -168,9 +171,30 @@ def kendal_tau(normal, cosined):
         if not n in cosp:
             discordant += 1
     kt = discordant*-2
-    kt /= len(norp)*2
+    if len(norp) != 0:
+        kt /= len(norp)*2
+    else:
+        kt = 0
     return kt + 1
 
+def get_htmls_from_list(topk):
+    html_path = os.path.join(os.path.join(os.path.join(
+        os.path.abspath('.'), 'inverted_index'), 'data'), 'html')
+    htmls = [os.path.join(html_path,str(html)+'.html') for html in range(1,81)]
+    links = list()
+    for x in topk:
+        sauce = open(htmls[x-1], 'r')
+        soup = BeautifulSoup(sauce, features='lxml')
+        link = soup.find('link', {'rel': 'canonical'})
+        if link is None:
+            link = soup.find('meta', {'property': 'og:url'})
+            links.append(link['content'])
+        else:
+            if not 'mundomax' in link['href']:
+                links.append(link['href'])
+            else:
+                links.append(htmls[x-1])
+    return links
 
 def main():
     query = input()
@@ -178,11 +202,15 @@ def main():
     docs_with_tfidf, _ = cosine_score(query)
     spearman_cor = spearman(docs_without_tfidf, docs_with_tfidf)
     kendal_tau_cor = kendal_tau(docs_without_tfidf, docs_with_tfidf)
-    print("Top escolhas sem TF-IDF:")
-    print(docs_without_tfidf)
+    docs_with_tfidf = get_htmls_from_list(docs_with_tfidf)
+    docs_without_tfidf = get_htmls_from_list(docs_without_tfidf)
+    print("Top 5 escolhas sem TF-IDF:")
+    for x in docs_without_tfidf[:5]:
+        print(x)
     print("---------------------------------------------------------------------------")
-    print("Top escolhas com TF-IDF:")
-    print(docs_with_tfidf)
+    print("Top 5 escolhas com TF-IDF:")
+    for x in docs_with_tfidf[:5]:
+        print(x)    
     print("---------------------------------------------------------------------------")
     print("Correlacao de Spearman:")
     print(spearman_cor)
@@ -191,7 +219,7 @@ def main():
     print(kendal_tau_cor)
     print("---------------------------------------------------------------------------")
 
-    return
+    return  
 
 
 if __name__ == "__main__":
