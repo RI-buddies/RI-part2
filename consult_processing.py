@@ -5,8 +5,6 @@ import os
 
 import numpy as np
 from bs4 import BeautifulSoup
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity, linear_kernel
 
 from inverted_index import utils
 
@@ -177,10 +175,12 @@ def kendal_tau(normal, cosined):
         kt = 0
     return kt + 1
 
+
 def get_htmls_from_list(topk):
     html_path = os.path.join(os.path.join(os.path.join(
         os.path.abspath('.'), 'inverted_index'), 'data'), 'html')
-    htmls = [os.path.join(html_path,str(html)+'.html') for html in range(1,81)]
+    htmls = [os.path.join(html_path, str(html)+'.html')
+             for html in range(1, 81)]
     links = list()
     for x in topk:
         sauce = open(htmls[x-1], 'r')
@@ -196,6 +196,7 @@ def get_htmls_from_list(topk):
                 links.append(htmls[x-1])
     return links
 
+
 def main():
     query = input()
     docs_without_tfidf, _ = doc_at_time_without_tfidf(query)
@@ -210,7 +211,7 @@ def main():
     print("---------------------------------------------------------------------------")
     print("Top 5 escolhas com TF-IDF:")
     for x in docs_with_tfidf[:5]:
-        print(x)    
+        print(x)
     print("---------------------------------------------------------------------------")
     print("Correlacao de Spearman:")
     print(spearman_cor)
@@ -219,7 +220,7 @@ def main():
     print(kendal_tau_cor)
     print("---------------------------------------------------------------------------")
 
-    return  
+    return
 
 
 if __name__ == "__main__":
